@@ -65,12 +65,12 @@ $("#addRows").on("click", function(){
 //child_added
 //clear fields
 
-// database.ref().on("value", function(snapshot) {
+database.ref().on("value", function(snapshot) {
 
-// 	$("#employee-input").text(snapshot.val().name);
-// 	$("#role-input").text(snapshot.val().email);
-// 	$("#date-input").text(snapshot.val().age);
-// 	$("#rate-input").text(snapshot.val().comment);
-// });
+	$("#employee-input").text(snapshot.val().name);
+	$("#role-input").text(snapshot.val().email);
+	$("#date-input").text(snapshot.val().age);
+	$("#rate-input").text(snapshot.val().comment);
+});
 
 });

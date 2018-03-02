@@ -11,6 +11,8 @@ var config = {
 
 firebase.initializeApp(config);
 
+	var database = firebase.database();
+	
 	var employeeName = "";
 	var role = "";
 	var startDate = 0;
@@ -46,5 +48,13 @@ $("#addRows").on("click", function(){
 
 	$("#tbody").append(newLine)
 });
+
+// database.ref().on("value", function(snapshot) {
+
+// 	$("#name-display").text(snapshot.val().name);
+// 	$("#email-display").text(snapshot.val().email);
+// 	$("#age-display").text(snapshot.val().age);
+// 	$("#comment-display").text(snapshot.val().comment);
+// });
 
 });

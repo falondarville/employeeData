@@ -20,6 +20,8 @@ firebase.initializeApp(config);
 
 $("#addRows").on("click", function(){
 
+	event.preventDefault();
+
 	employeeName = $("#employee-input").val().trim();
 	role = $("#role-input").val().trim();
 	startDate = $("#date-input").val().trim();

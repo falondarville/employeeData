@@ -56,6 +56,8 @@ $("#addRows").on("click", function(){
 
 });
 
+//text comment
+
 // function(errorObject) {
 // 	console.log("Errors handled: " + errorObject.code);
 // }

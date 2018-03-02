@@ -47,6 +47,8 @@ $("#addRows").on("click", function(){
 	newLine.append('<td>' + totalBilled + '</td>')
 
 	$("#tbody").append(newLine)
+
+	$("#rate-input").clear()
 });
 
 // database.ref().on("value", function(snapshot) {

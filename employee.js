@@ -12,7 +12,7 @@ var config = {
 firebase.initializeApp(config);
 
 	var database = firebase.database();
-	
+
 	var employeeName = "";
 	var role = "";
 	var startDate = 0;
@@ -23,6 +23,11 @@ firebase.initializeApp(config);
 $("#addRows").on("click", function(){
 
 	event.preventDefault();
+
+	$("#employee-input").empty();
+	$("#role-input").empty();
+	$("#date-input").empty();
+	$("#rate-input").empty();
 
 	employeeName = $("#employee-input").val().trim();
 	role = $("#role-input").val().trim();
@@ -48,15 +53,22 @@ $("#addRows").on("click", function(){
 
 	$("#tbody").append(newLine)
 
-	$("#rate-input").clear()
+
 });
+
+// function(errorObject) {
+// 	console.log("Errors handled: " + errorObject.code);
+// }
+
+//child_added
+//clear fields
 
 // database.ref().on("value", function(snapshot) {
 
-// 	$("#name-display").text(snapshot.val().name);
-// 	$("#email-display").text(snapshot.val().email);
-// 	$("#age-display").text(snapshot.val().age);
-// 	$("#comment-display").text(snapshot.val().comment);
+// 	$("#employee-input").text(snapshot.val().name);
+// 	$("#role-input").text(snapshot.val().email);
+// 	$("#date-input").text(snapshot.val().age);
+// 	$("#rate-input").text(snapshot.val().comment);
 // });
 
 });
